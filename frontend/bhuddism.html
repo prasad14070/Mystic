@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blogs</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      header {
+        background-color:darkblue;
+        color: white;
+        padding: 20px;
+        text-align: center;
+      }
+      h1 {
+        margin: 0;
+      }
+      .container {
+        margin: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      .block {
+        width: 30%;
+        margin-bottom: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+      }
+      .block img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+      .block .info {
+        padding: 10px;
+        background-color: #f1f1f1;
+        display: none;
+      }
+      .block.active .info {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Blogs on different Bhuddhism festivals</h1>
+    </header>
+    <div class="container">
+      <div class="block">
+        <a href="bhuddhapurima.html"  class="logo"><img src="data:image/jpeg;base64,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" alt=""></a>        
+          <h2></h2>
+          <!-- <p>Vesak, also known as Buddha Purnima or Buddha Jayanti, is one of the most important festivals in Buddhism. It commemorates the birth, enlightenment, and death (Parinirvana) of Gautama Buddha, the founder of Buddhism. The festival is celebrated by Buddhists around the world, usually on the full moon day in May, although the exact date may vary depending on the lunar calendar.</p> -->
+        </div>
+      </div>
+      
+      <!-- <div class="block">
+        <a href="ganesha.html" target="_blank" class="logo"><img src="gan.jpg" alt=""></a>        
+        <div class="info">
+          <h2>Image 2 Info</h2>
+          <p>Nulla lacinia hendrerit tellus, vitae tincidunt nisl hendrerit ac. Maecenas id lectus eu lorem malesuada venenatis.</p>
+        </div> -->
+      </div>
+      <div class="block">
+        <img src="https://via.placeholder.com/400x200?text=Image+3" alt="Image 3">
+        <div class="info">
+          <h2>Image 3 Info</h2>
+          <p>Cras ut rutrum felis. Aliquam euismod pellentesque lacus at posuere. Ut suscipit sapien vel mi rutrum commodo.</p>
+        </div>
+      </div>
+    </div>
+    <script>
+      const blocks = document.querySelectorAll('.block');
+      blocks.forEach(block => {
+        block.addEventListener('click', () => {
+          blocks.forEach(b => b.classList.remove('active'));
+          block.classList.add('active');
+        });
+      });
+    </script>
+  </body>
+</html>

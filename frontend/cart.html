@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shopping Cart</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <h1>Shopping Cart</h1>
+
+    <div id="items">
+        <h2>Available Items</h2>
+        <!-- <ul>
+            <li>Item 1 - $10 <button onclick="addToCart('Item 1', 10)">Add to Cart</button></li>
+            <li>Item 2 - $15 <button onclick="addToCart('Item 2', 15)">Add to Cart</button></li>
+            <li>Item 3 - $20 <button onclick="addToCart('Item 3', 20)">Add to Cart</button></li>
+        </ul> -->
+        
+    </div>
+    <h1>Product Page</h1>
+  
+    <div class="product-row"> 
+      <div class="product-card">
+        <img src="https://www.epoojastore.in/image/cache/catalog/newarrivals/2023/Copper-Kalasam-1-1000x1000.jpg" alt="" height="160px" width="160px">
+        <h2 class="product-title">Product 1</h2>
+        <p class="product-price">$19.99</p>
+        <p class="product-quantity">In stock: 10</p>
+        <button onclick="addToCart('Item 1', 20)">Add to Cart</button>      </div>
+      <div class="product-card">
+        <img src="https://www.epoojastore.in/image/cache/catalog/2022/artifical-flowers/zandu-ladi-3feet-epoojastore-1000x1000.jpg" alt="" height="160px" width="160px">
+
+        <h2 class="product-title">Product 2</h2>
+        <p class="product-price">$29.99</p>
+        <p class="product-quantity">In stock: 5</p>
+        <button onclick="addToCart('Item 1', 200)">Add to Cart</button>      </div>
+        <div class="product-card">
+            <img src="https://cdn.shopify.com/s/files/1/0552/0962/3746/products/IMG_9816copy_720x.jpg?v=1681373348" alt="" height="160px" width="160px">
+    
+            <h2 class="product-title">Product 2</h2>
+            <p class="product-price">$29.99</p>
+            <p class="product-quantity">In stock: 5</p>
+            <button onclick="addToCart('Item 1', 200)">Add to Cart</button>      </div>
+            <div class="product-card">
+                <img src="https://cf.cycle.in/cachewebp/data/Products/ThreeinOne/ThreeinOne-800x800-250x250.webp" alt=""  height="160px" width="160px">
+
+                <h2 class="product-title">Product 2</h2>
+                <p class="product-price">$29.99</p>
+                <p class="product-quantity">In stock: 5</p>
+                <button onclick="addToCart('Item 1', 200)">Add to Cart</button>      </div>
+                <div class="product-card">
+                    <img src="https://www.epoojastore.in/image/cache/catalog/2021/feb-2021/shivaratri%20special-kit-1000x1000.jpg" alt="" height="160px" width="160px">
+            
+                    <h2 class="product-title">Product 2</h2>
+                    <p class="product-price">$29.99</p>
+                    <p class="product-quantity">In stock: 5</p>
+                    <button onclick="addToCart('Item 1', 200)">Add to Cart</button>      </div>
+    <div id="cart">
+        <h2>Cart</h2>
+        <ul id="cart-items">
+            <!-- Cart items will be added dynamically here -->
+        </ul>
+        <p>Total: $<span id="total">0</span></p>
+        <a href="order.html">continue</a>
+        <button onclick="placeOrder()">Place Order</button>
+    </div>
+
+    <div id="order-confirmation" style="display: none;">
+        <h2>Order Confirmation</h2>
+        <p>Thank you for your order!</p>
+    </div>
+</body>
+</html>
+</body>
+</html>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .product-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .product-card {
+      width: 300px;
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 10px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .product-card img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .product-title {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .product-price {
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .product-quantity {
+      font-size: 14px;
+      color: #666;
+    }
+
+    .add-to-cart-button {
+      display: block;
+      width: 90%;
+      padding: 10px;
+      text-align: center;
+      background-color: darkblue;
+      color: white;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .add-to-cart-button:hover {
+      background-color: darkblue;
+    }
+  </style>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blogs</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      header {
+        background-color:darkblue;
+        color: white;
+        padding: 20px;
+        text-align: center;
+      }
+      h1 {
+        margin: 0;
+      }
+      .container {
+        margin: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      .block {
+        width: 30%;
+        margin-bottom: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+      }
+      .block img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+      .block .info {
+        padding: 10px;
+        background-color: #f1f1f1;
+        display: none;
+      }
+      .block.active .info {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Blogs on different festivals</h1>
+    </header>
+    <div class="container">
+      <div class="block">
+        <a href="diwali.html " target="_blank" class="logo"><img src="diwalii.png" alt=""></a>        
+          <h2>Diwali</h2>
+          <p>Diwali, also known as the Festival of Lights, is a major Hindu festival celebrated with great enthusiasm and joy, symbolizing the victory of light over darkness and good over evil. It involves the lighting of diyas (oil lamps), fireworks, exchange of gifts, and sharing of sweets among family and friends.</p>
+        </div>
+      </div>
+      
+      <div class="block">
+        <a href="ganesha.html" target="_blank" class="logo"><img src="gan.jpg" alt=""></a>        
+        <div class="info">
+          <h2>Image 2 Info</h2>
+          <p>Nulla lacinia hendrerit tellus, vitae tincidunt nisl hendrerit ac. Maecenas id lectus eu lorem malesuada venenatis.</p>
+        </div>
+      </div>
+      <div class="block">
+        <img src="https://via.placeholder.com/400x200?text=Image+3" alt="Image 3">
+        <div class="info">
+          <h2>Image 3 Info</h2>
+          <p>Cras ut rutrum felis. Aliquam euismod pellentesque lacus at posuere. Ut suscipit sapien vel mi rutrum commodo.</p>
+        </div>
+      </div>
+    </div>
+    <script>
+      const blocks = document.querySelectorAll('.block');
+      blocks.forEach(block => {
+        block.addEventListener('click', () => {
+          blocks.forEach(b => b.classList.remove('active'));
+          block.classList.add('active');
+        });
+      });
+    </script>
+  </body>
+</html>

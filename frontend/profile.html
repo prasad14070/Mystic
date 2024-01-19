@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Styling for the profile icon */
+        .profile-icon {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: #ccc;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            cursor: pointer;
+        }
+        
+        /* Styling for the profile information tooltip */
+        .profile-tooltip {
+            position: absolute;
+            display: none;
+            background-color: #f9f9f9;
+            color: #333;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            z-index: 9999;
+        }
+        
+        /* Show tooltip when hovering over the profile icon */
+        .profile-icon:hover + .profile-tooltip {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="profile-icon">Profile</div>
+        <div class="profile-tooltip">
+            <h3>John Doe</h3>
+            <p>Email: john.doe@example.com</p>
+            <p>Location: New York</p>
+        </div>
+    </div>
+</body>
+</html>
